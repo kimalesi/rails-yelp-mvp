@@ -1,0 +1,13 @@
+<h1>Restaurants</h1>
+<p>
+  <% @restaurants.each do |restaurant| %>
+  <br>
+  <%= link_to restaurant.name, restaurant_path(restaurant) %>
+  :
+  <%= restaurant.category %>
+  <% end %>
+</p>
+
+<p><%= link_to "<i class='fas fa-plus'></i> add a restaurant".html_safe, new_restaurant_path  %></p>
+
+<p><%= link_to "<i class='fas fa-plus'></i> add a review".html_safe, new_restaurant_review_path  %></p>
